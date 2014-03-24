@@ -23,7 +23,8 @@ jQuery.fn.anchortool = function (content, beforeshow) {
 
     $(this).click(function(event) {
         if(beforeshow)
-            beforeshow.call(this);
+            if(!beforeshow.call(this))
+                return;
         at.css({
             left: $(this).offset().left + ($(this).outerWidth()-at.outerWidth())/2,
             top: $(this).offset().top+$(this).outerHeight() + 1,
