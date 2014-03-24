@@ -18,6 +18,7 @@
 	$(function () {
 		$("span").anchortool("#show", function(){
 			$("#show").html($(this).html());
+			return true;
 		});
 
 		$("#tt").anchortool("#show2");
@@ -52,7 +53,6 @@
 
 	<div id="show2" style="background-color:blue;">
 		Hello World~~~~
-
 	</div>
 </body>
 </html>
