@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script type="text/javascript" src="./anchortool.js"></script>
+	<link rel="stylesheet" type="text/css" href="./anchortool.css">
+	<title>AnchorTool Test</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+
+	<style type="text/css">
+
+</style>
+
+<script type="text/javascript">
+	$(function () {
+		$("span").anchortool("#show", function(){
+			$("#show").html($(this).html());
+			return true;
+		});
+
+		$("#tt").anchortool("#show2");
+	})
+</script>
+
+</head>
+<body>
+	<center>
+		<span> <strong>AnchorTool</strong>
+		</span>
+		<br>
+		<span>It's a simple</span>
+		<span>jQuery</span>
+		<span>plugin to show a tip style elemet.</span>
+		<br />
+		<br />
+		<br />
+
+		<div id="tt" style="width:200px; height:100px; background-color:#E4E4E4;">A blue AnchorTool</div>
+
+		<br />
+		<br />
+		<br />
+
+		<a href="https://github.com/sintrb/Just-a-Page/tree/master/anchortool">Click here to get more information.</a>
+
+	</center>
+
+	
+	<div id="show" style="background-color:red;"></div>
+
+	<div id="show2" style="background-color:blue;">
+		Hello World~~~~
+	</div>
+</body>
+</html>
+
